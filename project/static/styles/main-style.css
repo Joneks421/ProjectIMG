@@ -3,15 +3,14 @@
 темный #3F3F3F
 грин #53DF83
 блу #47D2E9
-
 */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: 16px Verdana, Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
+    font: 20px Verdana, Arial, Helvetica, sans-serif;
+    text-transform: none;
 }
 
 h1 {
@@ -20,6 +19,12 @@ h1 {
     line-height: 3rem;
     padding: 20px;
 }
+
+.about > p {
+    text-align: left;
+    color: #EEEEEE;
+}
+
 
 h2 {
     text-align: center;
