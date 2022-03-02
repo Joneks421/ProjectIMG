@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container header">
+        <h1>Моя страница</h1>
+        <img src="images/user.png" alt="user">
+        <h2>Личный кабинет</h2>
+        <p><strong>Имя:</strong> Иванов Иван Иванович</p>
+        <p><strong>Телефон:</strong> 700000000</p>
+        <p><strong>Почта:</strong> mail@mail.ru</p>
+    </div>
+    <div class="container">
+        <ul style="list-style-type: none">
+            <li><img src="images/site.png" alt="site"><p>Верстать страницы</p></li>
+            <li><img src="images/programs.png" alt="programs"><p>Программировать интерфейс</p></li>
+            <li><img src="images/scripts.png" alt="scripts"><p>Писать разлчные скрипты</p></li>
+            <li><img src="images/coffee.png" alt="coffee"><p>Пить кофе с печеньками</p></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Немного о себе</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cumque facilis tempora adipisci dignissimos quo reprehenderit alias, magnam velit perferendis ducimus eum impedit illum, nemo temporibus sunt, tenetur pariatur sequi autem asperiores ullam! Officiis tempore et ullam necessitatibus eius fugit vitae neque, quae illum modi dolorum, corporis ut, nisi cumque.</p>
+    </div>
+    <div class="container">
+        <h2>Связатся со мной</h2>
+        <form action="#", method="GET">
+            <label for="name">Введите имя</label>
+            <input type="text" id="name" placeholder="Введите имя">
+            <label for="email">Введите Почту</label>
+            <input type="email" id="email" placeholder="Введите Почту">
+            <label for="text">Введите сообщение</label>
+            <textarea id="text" cols="30" rows="10" placeholder="Введите сообщение"></textarea>
+            <input type="submit">
+        </form>
+    </div>
+
+
+
+
+
+</body>
+</html>
+    
