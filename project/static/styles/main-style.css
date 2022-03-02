@@ -1,0 +1,138 @@
+/* цвета: 
+светлый #EEEEEE
+темный #3F3F3F
+грин #53DF83
+блу #47D2E9
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 16px Verdana, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #3F3F3F;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.menu_item {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #3F3F3F;
+    color: #EEEEEE;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.menu_item:hover {
+    border: 1px solid #47D2E9;
+    border-radius: 5px;
+    background-color: #47D2E9;
+    color: #3F3F3F;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.5);
+}
+
+
+.index-content {
+    text-align: center;
+    height: 100vh;
+    background: no-repeat linear-gradient(
+        rgba(2, 2, 2, 0.7), 
+        rgba(2, 2, 2, 0.7)
+      ), url('../images/bg.jpg');
+    background-size: cover;
+}
+
+.index-content > h1 {
+    color: #EEEEEE;
+    font-size: 3rem;
+    line-height: 5rem;
+    padding: 150px 20px;
+}
+
+.index-content > a {
+    display: inline-block;
+    color: #EEEEEE;
+    background-color: #53DF83;
+    padding: 20px;
+    width: 230px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+
+.index-content > a:hover {
+    background-color: #47D2E9;
+    color: #3F3F3F;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    
+}
+
+.form_group > * {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.form_group > input {
+    padding: 10px;
+    text-transform: none;
+}
+
+.form_group > #rememder, .rememder {
+   display: inline;
+   width: auto;
+}
+
+.form_group > input[type='submit'] {
+    width: auto;
+    padding: 10px 30px;
+    background-color: #53DF83;
+    border: 0px solid #53DF83;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form_group > input[type='submit']:hover {
+    box-shadow: 0 0 5px rgba(22, 22, 22, 0.8);
+}
