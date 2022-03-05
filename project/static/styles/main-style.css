@@ -36,7 +36,8 @@ h2 {
 }
 
 .header {
-    background-color: #3F3F3F;
+    background:radial-gradient(circle at top center, #307885, #252c36);
+    border-bottom: 0.1rem solid #3F3F3F;
 }
 
 .menu {
@@ -45,7 +46,10 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    
     text-align: center;
+    background: #307885;
+    border-radius: 20px;
 }
 
 .menu_item {
@@ -59,13 +63,14 @@ h2 {
     text-decoration: none;
     cursor: pointer;
     transition: 0.4s ease;
+    background:#252c36;
 }
 
 .menu_item:hover {
     border: 1px solid #47D2E9;
     border-radius: 5px;
+    color: #252c36;
     background-color: #47D2E9;
-    color: #3F3F3F;
     box-shadow: 0 0 10px rgba(8, 8, 8, 0.5);
 }
 
@@ -78,6 +83,7 @@ h2 {
         rgba(2, 2, 2, 0.7)
       ), url('../images/bg.jpg');
     background-size: cover;
+    background:radial-gradient(circle at top center, #307885, #252c36);
 }
 
 .index-content > h1 {
@@ -105,6 +111,10 @@ h2 {
     background-color: #47D2E9;
     color: #3F3F3F;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.index-content.about {
+    background:radial-gradient(circle at bottom center, #307885, #252c36);
 }
 
 form {

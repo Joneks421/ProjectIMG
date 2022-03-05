@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -31,8 +31,8 @@ body {
 .wrap {
   width: 100%;
   height: 100vh;
-  background: url(/static/images/back.png) repeat,
-              radial-gradient(circle at top center, #307885, #252c36);
+  background: url(/static/images/bg8.jpg) repeat,
+              radial-gradient(circle at center top, #307885, #252c36);
   text-align: center;
   -ms-user-select: none; 
   -moz-user-select: none; 
@@ -46,8 +46,9 @@ body {
   left: var(--menu-left);
   display: inline-block;
   font-size: 0;
-  border: 1px solid #11606e;
   z-index: 1000;
+  border-radius: 0 7px 7px 0;
+  rotate: 270deg;
 }
 
 .menu__item {
@@ -56,13 +57,14 @@ body {
   vertical-align: middle;
   height: 6.3rem;
   padding: 0 1.4rem;
-  font-size: 0.9rem;
-  line-height: 0.9rem;
+  font-size: 1rem;
+  line-height: 1rem;
   text-transform: uppercase;
   text-align: center;
   color: #f0ffff;
-  background-color: #184654;
+  background:#184654;
   cursor: pointer;
+
 }
 
 .menu__item:before {
@@ -73,7 +75,7 @@ body {
 }
 
 .menu__item:hover {
-  color: #fff;
+  color: #aff;
 }
 
 .menu__item_active {
@@ -83,6 +85,7 @@ body {
 .menu__icon, .menu__item-title {
   display: inline-block;
   vertical-align: middle;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .menu__icon {
@@ -104,15 +107,17 @@ body {
 .drag {
   width: 2.1rem;
   padding: 0;
-  background-color: #7b8c9c;
-  background: url(/static/images/dotes.png) no-repeat center #7b8c9c;
+  background-color: #33336d;
+  background: url(/static/images/dotes.png) no-repeat center #08b6a7;
   cursor: move;
+  border-radius: 7px;
 }
 
 .burger {
   padding: 0 2.1rem;
   border-left: 0.1rem solid #51606e;
   border-right: 0.1rem solid #51606e;
+  border-radius: 7px 0 0 7px;
 }
 
 .burger-icon {
@@ -174,6 +179,12 @@ body {
   background-position: -85px -1px;
 }
 
+.delete-icon {
+  width: 25px;
+  height: 25px;
+  background-position: -109px -1px;
+}
+
 .new:after, .draw:after, .comments:after {
   content: '';
   position: absolute;
@@ -190,6 +201,10 @@ body {
   background-position: -56px -31px;
 }
 
+.menu__item.new{
+  border-radius: 7px 0 0 7px;
+}
+
 .menu__item.comments:hover > .comments-icon {
   background-position: -1px -28px;
 }
@@ -202,13 +217,21 @@ body {
   background-position: -85px -25px;
 }
 
+.menu__item.delete:hover > .delete-icon {
+  background-position: -109px -26px;
+}
+
+.menu__item.delete {
+  border-left:#455667;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~ панели инструментов ~~~~~~~~~~~~~~~~~~~~~ */
 
-.comments-tools, .draw-tools, .share-tools {
+.comments-tools, .draw-tools, .share-tools, .delete-tools {
   border-left: 0.1rem solid #51606e;
   border-right: 0.1rem solid #51606e;
   cursor: initial;
+  border-radius: 0 7px 7px 0;
 }
 
 .comments-tools:after, .draw-tools:after, .share-tools:after {
@@ -222,18 +245,20 @@ body {
 .menu__color, .menu__url, .menu_copy, .menu__toggle, .menu__toggle-bttn {
   display: inline-block;
   vertical-align: middle;
-}
+  border-radius: 7px 0 0 7px
+};
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ рисование ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .draw-tools {
   padding-right: 0;
   font-size: 0;
+  border-radius: 0 7px 7px 0;
 }
 
 .menu__color {
   position: relative;
-  width: 2.0rem;
+  width: 1.8rem;
   z-index: 2;
   opacity: 0;
   height: 2.0rem;
@@ -261,11 +286,15 @@ body {
 .menu__color:checked + span {
   border-radius: 1.2rem;
   border: 0.3rem solid #fff;
-  cursor: pointer;
+  cursor:url(\static\images\edit.png);
 }
 
 .menu__color.red + span {
   background-color: #eb5d56;
+}
+
+.menu__color.orange + span {
+  background-color: #ff7b1c;
 }
 
 .menu__color.yellow + span {
@@ -276,6 +305,10 @@ body {
   background-color: #6ebf44;
 }
 
+.menu__color.aqua + span {
+  background-color: #1cf0ff;
+}
+
 .menu__color.blue + span {
   background-color: #52a7f7;
 }
@@ -284,16 +317,17 @@ body {
   background-color: #b36ae0;
 }
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ комментировать ~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .comments-tools {
   width: 24.2rem;
+  border-radius: 0 7px 7px 0;
 }
 
 .menu__toggle-title, .menu__toggle-bg, .menu__toggle, .menu__toggle-bttn {
   display: inline-block;
   vertical-align: middle;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .menu__toggle-title {
@@ -378,7 +412,8 @@ body {
 .comments__form {
   position: absolute;
   top: calc(4 * var(--menu-top));
-  left: calc(3 * var(--menu-left));  
+  left: calc(3 * var(--menu-left)); 
+
 }
 
 .comments__marker {
@@ -390,6 +425,7 @@ body {
   background-image: url(/static/images/comment.png);
   background-repeat: no-repeat;
   cursor: pointer;
+  border-radius: 3px 3px 0 0;
 }
 
 .comments__marker-checkbox {
@@ -405,14 +441,14 @@ body {
 
 .comments__body {
   display: none;
-  width: 27rem;
+  width: 25.75rem;
   max-height: 32rem;
-  background-color: #384654;
-  border: 0.1rem solid #1e2934;
+  background-color: #184654;
   padding: 2rem 1.5rem 2rem 2rem;
   font-size: 1.3rem;
   text-align: left;
   overflow-y: scroll;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .comments__marker:checked {
@@ -444,7 +480,7 @@ body {
 
 .comments__body input, .comments__body textarea {
   border: 1px solid #8b9cad;
-  color: #8b9cad;
+  color: #eeeeee;
 }
 
 .comments__body input:focus, .comments__body textarea:focus {
@@ -466,7 +502,7 @@ body {
   user-select: text;  
 }
 
-.comments__close, .comments__submit {
+.comments__close, .comments__submit, .comments__delete {
   width: 10rem;
   height: 2.8rem;
   text-transform: uppercase;
@@ -475,7 +511,7 @@ body {
   cursor: pointer;
 }
 
-.comments__close:hover, .comments__submit:hover {
+.comments__close:hover, .comments__submit:hover, .comments__delete:hover {
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -487,6 +523,13 @@ body {
 .comments__close {
   background-color: #384654;
   margin-right: 0.6rem;
+}
+
+.comments__delete {
+  background-color:#FA8072;
+  margin-top: 0.6rem;
+  margin-left: 5.5rem;
+  color: #ffffff;
 }
 
 .comments__input::-webkit-input-placeholder {
@@ -506,7 +549,7 @@ body {
 }
 
 .comments__body::-webkit-scrollbar-track{
-  background-color: #384654;
+  background-color: #184654;
 }
 
 .comments__body::-webkit-scrollbar{
@@ -531,6 +574,7 @@ body {
   -moz-user-select: text; 
   -webkit-user-select: text;   
   user-select: text;  
+  border-radius: 7px;
 }
 
 .menu_copy {
@@ -544,6 +588,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   cursor: pointer;
+  border-radius: 7px;
 }
 
 .menu_copy:hover {
@@ -584,11 +629,19 @@ body {
   z-index: 10;
   color: #fff;
   text-shadow: 0 0 0.2rem #000;
+  border-radius: 7px 0 0 7px
+
 }
 
 .image-loader__message {
   font-size: 2rem;
   margin-top: 2rem;
+  background-color: #666666;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 8px;
 }
 
 .loader {
@@ -613,6 +666,7 @@ body {
 .image-loader .loader span {
   width: 2rem;
   height: 2rem;
+  border-radius: 9px 9px 9px 9px
 }
 
 .loader span:nth-child(1) {
