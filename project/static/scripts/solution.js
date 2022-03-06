@@ -19,6 +19,8 @@ const burger = $(menu, '.burger');
 const newMode = $(menu, '.mode');
 const comments = $(menu, '.comments');
 const commentsTools = $(menu, '.comments-tools');
+const deletes = $(menu, '.delete')
+const deletesTools = $(menu, '.delete-tools')
 const menuToggle = $(commentsTools, '.menu__toggle', false);
 const draw = $(menu, '.draw');
 const drawTools = $(menu, '.draw-tools');
@@ -174,8 +176,6 @@ currentImage.addEventListener('load', beforeLoadImg);
 if (sessionStorage.getItem('imgId')) {
     imgId = sessionStorage.getItem('imgId');
     currentImage.src = sessionStorage.getItem('imgUrl');
-    console.log(currentImage, window.screen.width);
-    currentImage.width= window.screen.width - 50;
     currentImage.height= window.screen.height -150;
     menuUrl.value = sessionStorage.getItem('imgSharedLink');
 };
@@ -303,6 +303,15 @@ comments.addEventListener('click', () => {
     menu.dataset.state = 'selected';
     comments.dataset.state = 'selected';
     commentsTools.classList.remove('tool');
+    canvas.style.cursor = 'default';
+    canvas.addEventListener('click', addCommentEvent);
+    canvas.removeEventListener('mousemove', circle);
+});
+
+deletes.addEventListener('click', () => {
+    menu.dataset.state = 'selected';
+    deletes.dataset.state = 'selected';
+    deletesTools.classList.remove('tool');
     canvas.style.cursor = 'default';
     canvas.addEventListener('click', addCommentEvent);
     canvas.removeEventListener('mousemove', circle);
@@ -449,6 +458,7 @@ if (window.location.search) {
         comments.dataset.state = 'selected';
         commentsTools.classList.remove('tool');
         currentImage.addEventListener('load', () => {
+            currentImage.height= window.screen.height -150;
             resizeCanvasAndMask();
             checkImg = false;
             menu.dataset.state = 'selected';

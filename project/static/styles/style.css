@@ -107,7 +107,6 @@ body {
 .drag {
   width: 2.1rem;
   padding: 0;
-  background-color: #33336d;
   background: url(/static/images/dotes.png) no-repeat center #08b6a7;
   cursor: move;
   border-radius: 7px;
@@ -185,7 +184,7 @@ body {
   background-position: -109px -1px;
 }
 
-.new:after, .draw:after, .comments:after {
+.new:after, .draw:after, .comments:after, .share:after {
   content: '';
   position: absolute;
   right: -0.1rem;
@@ -234,7 +233,14 @@ body {
   border-radius: 0 7px 7px 0;
 }
 
-.comments-tools:after, .draw-tools:after, .share-tools:after {
+.delete-img, .delete-lines {
+  border-left: 0.1rem solid #51606e;
+  border-right: 0.1rem solid #51606e;
+  cursor: initial;
+  border-radius: 0 7px 7px 0;
+}
+
+.comments-tools:after, .draw-tools:after, .share-tools:after, .delete-tools::after {
   content: url(/static/images/triangle.png);
   position: absolute;
   top: 2.6rem;
@@ -242,7 +248,7 @@ body {
   z-index: 10;
 }
 
-.menu__color, .menu__url, .menu_copy, .menu__toggle, .menu__toggle-bttn {
+.menu__color, .menu__url, .menu_copy, .menu__toggle, .menu__toggle-bttn, .menu__delete-img, .menu__delete-lines, .menu__delete-comments {
   display: inline-block;
   vertical-align: middle;
   border-radius: 7px 0 0 7px
@@ -253,7 +259,6 @@ body {
 .draw-tools {
   padding-right: 0;
   font-size: 0;
-  border-radius: 0 7px 7px 0;
 }
 
 .menu__color {
@@ -591,7 +596,53 @@ body {
   border-radius: 7px;
 }
 
+.menu__delete-img {
+  width: 11.2rem;
+  height: 2.8rem;
+  margin-left: 0;
+  background-color: #455667;
+  color: #a5b7c8;
+  border: 0.1rem solid #9fb0c1;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.menu__delete-lines{
+  width: 11.2rem;
+  height: 2.8rem;
+  margin-left: 6px;
+  background-color: #455667;
+  color: #a5b7c8;
+  border: 0.1rem solid #9fb0c1;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.menu__delete-comments {
+  width: 11.2rem;
+  height: 2.8rem;
+  margin-left: 6px;
+  background-color: #455667;
+  color: #a5b7c8;
+  border: 0.1rem solid #9fb0c1;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
 .menu_copy:hover {
+  background-color: #5f7488;
+}
+
+.menu__delete-img:hover, .menu__delete-lines:hover, .menu__delete-comments:hover {
   background-color: #5f7488;
 }
 
