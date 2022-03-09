@@ -1,11 +1,12 @@
-function scroller_about(element){
-    window.scroll({
-        left: 0,
-        top: element.offsetTop,
-        behavior: 'smooth'
-    })
-    
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
 
-}
-var button = document.querySelector('.button');
-var footer = document.querySelector('#footer')
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};

@@ -15,20 +15,51 @@
 
 h1 {
     text-align: center;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1rem;
+    line-height: 1rem;
     padding: 20px;
 }
 
-.about > p {
-    text-align: left;
+.about > h1 {
+    text-align: center;
     color: #EEEEEE;
 }
 
+.about > p {
+    text-align: center;
+    color: #EEEEEE;
+}
+.verni{
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+}
+
+.verni > a{
+    border-radius: 5px;
+    color: #EEEEEE;
+    background-color: #252c36;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.verni > a:hover{
+    border: 1px solid #47D2E9;
+    border-radius: 5px;
+    color: #252c36;
+    background-color: #47D2E9;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.5);
+    padding: 10px;
+    text-decoration: none;
+    right: auto;
+}
 
 h2 {
     text-align: center;
+    padding-bottom: 0px;
 }
+
 
 .container {
     max-width: 980px;
@@ -101,10 +132,13 @@ h2 {
     width: 230px;
     text-decoration: none;
     border-radius: 5px;
-    margin: 20px;
+    margin-top: 20px;
     cursor: pointer;
     transition: 0.4s ease;
+    text-align: center
 }
+
+
 
 
 .index-content > a:hover {
