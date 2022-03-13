@@ -78,7 +78,6 @@ h2 {
 
 .header {
     background:radial-gradient(circle at top center, #307885, #252c36);
-    border-bottom: 0.1rem solid #3F3F3F;
 }
 
 .menu {
@@ -119,12 +118,8 @@ h2 {
 .index-content {
     text-align: center;
     height: 100vh;
-    background: no-repeat linear-gradient(
-        rgba(2, 2, 2, 0.7), 
-        rgba(2, 2, 2, 0.7)
-      ), url('../images/bg.jpg');
     background-size: cover;
-    background:radial-gradient(circle at top center, #307885, #252c36);
+    background: linear-gradient(circle at top center, #307885, #252c36);
 }
 
 .index-content > h1 {
@@ -158,8 +153,13 @@ h2 {
 }
 
 .index-content.about {
-    background:radial-gradient(circle at bottom center, #307885, #252c36);
+    background: linear-gradient(circle at top center, #307885, #252c36);
 }
+
+.index-content.faq {
+    background: linear-gradient(circle at top center, #307885, #252c36);
+}
+
 
 form {
     max-width: 500px;
