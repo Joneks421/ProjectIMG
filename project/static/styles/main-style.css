@@ -5,11 +5,13 @@
 блу #47D2E9
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: 20px Verdana, Arial, Helvetica, sans-serif;
+    font: 20px 'Roboto', sans-serif;
     text-transform: none;
 }
 
@@ -18,6 +20,8 @@ h1 {
     font-size: 1rem;
     line-height: 1rem;
     padding: 20px;
+    text-transform: uppercase;
+
 }
 
 .about > h1 {
@@ -55,7 +59,7 @@ h1 {
     text-decoration: none;
     right: auto;
 }
-.faq > h2{
+.faq > h3{
     color: white;
     size: 30px;
     font-size: 30px;
@@ -82,10 +86,9 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    
     text-align: center;
-    background: radial-gradient(circle at bottom center, #3389AA, #23a59a);
-    border-radius: 20px;
+    /* background: radial-gradient(circle at bottom center, #3389AA, #23a59a);
+    border-radius: 20px; */
 }
 
 .menu_item {
@@ -100,6 +103,7 @@ h2 {
     cursor: pointer;
     transition: 0.4s ease;
     background:#252c36;
+    font-size: 30px;
 }
 
 .menu_item:hover {
@@ -119,9 +123,10 @@ h2 {
 
 .index-content > h1 {
     color: #CCC;
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 5rem;
-    padding: 150px 20px;
+    padding: 50px 20px;
+    margin-top: 100px;
 }
 
 .index-content > a {
@@ -132,8 +137,8 @@ h2 {
     width: 230px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-bottom: 0;
     cursor: pointer;
     transition: 0.4s ease;
     text-align: center
@@ -148,9 +153,12 @@ h2 {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-.index-content.about > h1, .index-content.faq > h1, .index-content.support > h1, .index-content.inst > h1 {
+.index-content.about > h2, .index-content.faq > h2, .index-content.support > h2, .index-content.inst > h2 {
     padding: 50px;
     margin-top: 150px;
+    font-size: 3.5rem;
+    line-height: 6rem;
+    color: #CCC;
 }
 
 .index-content.about-container {
@@ -174,19 +182,19 @@ h2 {
     background: radial-gradient(circle at left center, #338caf, #28cabd);
 } */
 
-.index-content > h1:nth-child(1){
+.index-content > h1, .index-content > h2:nth-child(1){
   animation: pulse 3s infinite 0.2s;
 }
-.index-content > h1:nth-child(1){
+.index-content > h1, .index-content > h2:nth-child(1){
   animation: pulse 3s infinite 0.4s;
 }
-.index-content > h1:nth-child(1){
+.index-content > h1, .index-content > h2:nth-child(1){
   animation: pulse 3s infinite 0.6s;
 }
-.index-content > h1:nth-child(1){
+.index-content > h1, .index-content > h2:nth-child(1){
   animation: pulse 3s infinite 0.8s;
 }
-.index-content > h1:nth-child(1){
+.index-content > h1, .index-content > h2:nth-child(1){
   animation: pulse 3s infinite 1s;
 }
 
@@ -199,17 +207,94 @@ h2 {
   }
 }
 
-.index-content.faq {
-
+.index-content.faq-container {
+    margin: 0 150px 0 150px;
+    background-color: #252c36;
+    border-radius: 30px; 
+    padding: 40px 0 40px 0; 
 }
 
-.index-content.support {
-    
+.index-content.faq-container-1 {
+    background-color: #f5424e22;
+    margin: 20px 60px 40px 60px;
+    padding: 30px 0 30px 0;
+    border-radius: 20px;
 }
 
-.index-content.inst {
-    
+.index-content.faq-container-2 {
+    background-color: #f5f54222;
+    margin: 40px 60px 40px 60px;
+    padding: 30px 0 30px 0;
+    border-radius: 20px;
 }
+
+.index-content.faq-container-3 {
+    background-color: #42f55a22;
+    margin: 40px 60px 20px 60px;
+    padding: 30px 0 30px 0;
+    border-radius: 20px;
+}
+
+.index-content.faq-container-1 > h3, 
+.index-content.faq-container-2 > h3,
+.index-content.faq-container-3 > h3 {
+    color: #CCC;
+    font-size: 2.2rem;
+}
+
+.index-content.faq-container-1 > p, .index-content.faq-container-2 > p, .index-content.faq-container-3 > p {
+    color: #CCC;
+    font-size: 1.7rem;
+}
+
+
+
+
+.index-content.support-container {
+    margin: 0 150px 0 150px;
+    background-color: #252c36;
+    border-radius: 30px; 
+    padding: 40px 0 40px 0;
+}
+
+.index-content.support-container-1 {
+    background-color: #f5424e22;
+    margin: 0 150px 0 150px;
+    border-radius: 20px;
+    padding: 40px 0 40px 0;
+    margin-top: 20px;
+}
+
+.index-content.support-container-2 {
+    background-color: #f5f54222;
+    margin: 0 150px 0 150px;
+    border-radius: 20px;
+    padding: 40px 0 40px 0;
+    margin-top: 20px;
+}
+
+.index-content.support-container-3 {
+    background-color: #42f55a22;
+    margin: 0 150px 0 150px;
+    border-radius: 20px;
+    padding: 40px 0 40px 0;
+    margin-top: 20px;
+}
+
+.index-content.support-container-1 > h3, 
+.index-content.support-container-2 > h3,
+.index-content.support-container-3 > h3 {
+    color: #CCC;
+    font-size: 2.2rem;
+}
+
+.index-content.support-container-1 > p, .index-content.support-container-2 > p, .index-content.support-container-3 > p {
+    color: #CCC;
+    font-size: 1.5rem;
+}
+
+
+
 
 .index-content.inst-container {
     margin: 0 150px 0 150px;
