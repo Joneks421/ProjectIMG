@@ -22,7 +22,7 @@ h1 {
 
 .about > h1 {
     text-align: center;
-    color: #EEEEEE;
+    color: #EEE;
 }
 
 .about > p {
@@ -30,10 +30,6 @@ h1 {
     color: #EEEEEE;
 }
 
-.about > #marky {
-    text-align: center;
-    color: gold;
-}
 .verni{
     position: fixed;
     bottom: 15px;
@@ -77,7 +73,7 @@ h2 {
 }
 
 .header {
-    background:radial-gradient(circle at top center, #307885, #252c36);
+    background:radial-gradient(circle at top center, #1d555f, #252c36);
 }
 
 .menu {
@@ -88,7 +84,7 @@ h2 {
     justify-content: space-around;
     
     text-align: center;
-    background: #307885;
+    background: radial-gradient(circle at bottom center, #3389AA, #23a59a);
     border-radius: 20px;
 }
 
@@ -117,13 +113,12 @@ h2 {
 
 .index-content {
     text-align: center;
-    height: 100vh;
     background-size: cover;
     background: linear-gradient(circle at top center, #307885, #252c36);
 }
 
 .index-content > h1 {
-    color: #EEEEEE;
+    color: #CCC;
     font-size: 3rem;
     line-height: 5rem;
     padding: 150px 20px;
@@ -133,14 +128,15 @@ h2 {
     display: inline-block;
     color: #EEEEEE;
     background-color: #53DF83;
-    padding: 20px;
+    padding: 35px;
     width: 230px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     cursor: pointer;
     transition: 0.4s ease;
-    text-align: center;
+    text-align: center
 }
 
 
@@ -152,44 +148,137 @@ h2 {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-.index-content.about {
+.index-content.about > h1, .index-content.faq > h1, .index-content.support > h1, .index-content.inst > h1 {
+    padding: 50px;
+    margin-top: 150px;
+}
 
+.index-content.about-container {
+    margin: 0 150px 0 150px;
+    background-color: #252c36;
+    border-radius: 30px;  
+}
+
+.index-content.about-container > p {
+    font-size: 35px;
+    height: 60vh;
+    padding: 100px 0 50px 0;
+    margin: 0 100px 0 100px;
+    color: #CCC;
+}
+
+/* .circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: radial-gradient(circle at left center, #338caf, #28cabd);
+} */
+
+.index-content > h1:nth-child(1){
+  animation: pulse 3s infinite 0.2s;
+}
+.index-content > h1:nth-child(1){
+  animation: pulse 3s infinite 0.4s;
+}
+.index-content > h1:nth-child(1){
+  animation: pulse 3s infinite 0.6s;
+}
+.index-content > h1:nth-child(1){
+  animation: pulse 3s infinite 0.8s;
+}
+.index-content > h1:nth-child(1){
+  animation: pulse 3s infinite 1s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: #CCC;
+  }
+  50% {
+    color: #999;
+  }
 }
 
 .index-content.faq {
+
+}
+
+.index-content.support {
     
 }
 
-.inst > div {
-    display: inline-block;
-    width: 40%;
+.index-content.inst {
+    
 }
 
-.image_1 {
-    width: 100%;
+.index-content.inst-container {
+    margin: 0 150px 0 150px;
+    background-color: #252c36;
+    border-radius: 30px;
 }
 
-.image {
+.index-content.inst-container-1 {
+    text-align: left;
+    font-size: 30px;
+    color: #CCC;
+    width: 606px;
+    margin-right: 10px;
     display: inline-block;
-    width: 100%;
     position: relative;
-    background-image: url("../images/1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 46%;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.index-content.inst-container-1img {
+    background-image: url("../images/review-all.jpg");
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    width: 46%;
+    margin-right: 20px;
+    margin-bottom: 20px;
     background-position: center center;
-    
 }
 
-.image > * {
-    padding: 80px 20px;
+.index-content.inst-container-2 {
+    text-align: left;
+    font-size: 30px;
+    color: #CCC;
+    width: 606px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    width: 46%;
+    margin: 0;
+    margin-bottom: 15px;
+    padding-top: 20px;
 }
 
-.ttt {
-    padding: 0;
-    top:10px;
-    background-color: #fff;
+.index-content.inst-container-2img {
+    background-image: url("../images/components.jpg");
+    height: 650px;
+    display: inline-block;
+    position: relative;
+    width: 46%;
+    margin-bottom: 20px;
+}
+
+.index-content.inst-container-3img {
+    background-image: url("../images/default-sm-comments.jpg");
+    height: 330px;
+    width: 720px;
+    display: inline-block;
     position: absolute;
+    left: 199px;
+    background-position: center center;
 }
+
+.index-content.support {
+
+}
+
 
 form {
     max-width: 500px;
