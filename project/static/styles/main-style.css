@@ -121,7 +121,14 @@ h2 {
     background: linear-gradient(circle at top center, #307885, #252c36);
 }
 
-.index-content > h1 {
+.main-container {
+    margin: 50px 300px 0 300px;
+    background-color: #252c36;
+    border-radius: 30px; 
+    padding: 40px 0 40px 0; 
+}
+
+.main-container > h1 {
     color: #CCC;
     font-size: 4rem;
     line-height: 5rem;
@@ -129,7 +136,7 @@ h2 {
     margin-top: 100px;
 }
 
-.index-content > a {
+.main-container > a {
     display: inline-block;
     color: #EEEEEE;
     background-color: #53DF83;
@@ -266,7 +273,7 @@ h2 {
 }
 
 .index-content.support-container-2 {
-    background-color: #f5f54222;
+    background-color: #215FDB22;
     margin: 0 150px 0 150px;
     border-radius: 20px;
     padding: 40px 0 40px 0;
@@ -274,7 +281,7 @@ h2 {
 }
 
 .index-content.support-container-3 {
-    background-color: #42f55a22;
+    background-color: #39FAFA22;
     margin: 0 150px 0 150px;
     border-radius: 20px;
     padding: 40px 0 40px 0;
