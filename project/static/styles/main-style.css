@@ -77,6 +77,124 @@ h2 {
     background-color: #014852;
 }
 
+.name-menu {
+    position: absolute;
+    left: 140px;
+    top: 20px;
+    width: 103px;
+    color: #CCC;
+    padding: 5px;
+    background-color: #1c525c;
+    border-radius: 5px;
+}
+
+.name-menuCus {
+    color: #74ee9e;
+    font-size: xx-large;
+    width: 52px;
+    display: inline-block;
+    position: relative;
+}
+.name-menuT {
+    color: #30ac5b;
+    font-size: xx-large;
+    width: 19px;
+    display: inline-block;
+    position: relative;
+}
+.name-menuD {
+    color: #46d6e9;
+    font-size: xx-large;
+    width: 19px;
+    display: inline-block;
+    position: relative;
+}
+
+.name-menu > p:nth-child(1) {
+    animation: pulse-nameCus 3s infinite 0.2s;
+  }
+.name-menu > p:nth-child(1) {
+    animation: pulse-nameCus 3s infinite 0.4s;
+  }
+.name-menu > p:nth-child(1) {
+    animation: pulse-nameCus 3s infinite 0.6s;
+  }
+.name-menu > p:nth-child(1) {
+    animation: pulse-nameCus 3s infinite 0.8s;
+  }
+.name-menu > p:nth-child(1) {
+    animation: pulse-nameCus 3s infinite 1s;
+  }
+  
+@keyframes pulse-nameCus {
+    0%, 100% {
+      color: #74ee9e;
+    }
+    20% {
+      color: #30ac5b;
+    }
+    40% {
+        color: #46d6e9;
+      }
+  }
+
+.name-menu > p:nth-child(2) {
+    animation: pulse-nameT 3s infinite 0.2s;
+  }
+.name-menu > p:nth-child(2) {
+    animation: pulse-nameT 3s infinite 0.4s;
+  }
+.name-menu > p:nth-child(2) {
+    animation: pulse-nameT 3s infinite 0.6s;
+  }
+.name-menu > p:nth-child(2) {
+    animation: pulse-nameT 3s infinite 0.8s;
+  }
+.name-menu > p:nth-child(2) {
+    animation: pulse-nameT 3s infinite 1s;
+  }
+
+@keyframes pulse-nameT {
+    0%, 100% {
+      color: #30ac5b;
+    }
+    20% {
+      color: #46d6e9;
+    }
+    40% {
+        color: #74ee9e;
+      }
+  }
+
+.name-menu > p:nth-child(3) {
+    animation: pulse-nameD 3s infinite 0.2s;
+  }
+.name-menu > p:nth-child(3) {
+    animation: pulse-nameD 3s infinite 0.4s;
+  }
+.name-menu > p:nth-child(3) {
+    animation: pulse-nameD 3s infinite 0.6s;
+  }
+.name-menu > p:nth-child(3) {
+    animation: pulse-nameD 3s infinite 0.8s;
+  }
+.name-menu > p:nth-child(3) {
+    animation: pulse-nameD 3s infinite 1s;
+  }
+
+@keyframes pulse-nameD {
+    0%, 100% {
+      color: #46d6e9;
+    }
+    20% {
+      color: #74ee9e;
+    }
+    40% {
+        color: #30ac5b;
+      }
+  }
+
+
 .header {
     background:radial-gradient(circle at top center, #1d555f, #252c36);
 }
@@ -185,7 +303,7 @@ h2 {
 }
 
 .index-content.about-container > p {
-    font-size: 35px;
+    font-size: 38px;
     height: 60vh;
     padding: 100px 0 50px 0;
     margin: 0 100px 0 100px;
