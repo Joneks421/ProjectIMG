@@ -21,7 +21,6 @@ h1 {
     line-height: 1rem;
     padding: 20px;
     text-transform: uppercase;
-
 }
 
 .about > h1 {
@@ -40,7 +39,7 @@ h1 {
     right: 10px;
 }
 
-.verni > a{
+.verni > a {
     border-radius: 5px;
     color: #EEEEEE;
     background-color: #252c36;
@@ -49,7 +48,7 @@ h1 {
     text-decoration: none;
 }
 
-.verni > a:hover{
+.verni > a:hover {
     border: 1px solid #47D2E9;
     border-radius: 5px;
     color: #252c36;
@@ -86,6 +85,7 @@ h2 {
     padding: 5px;
     background-color: #1c525c;
     border-radius: 5px;
+    animation: invisible 1s forwards;
 }
 
 .name-menuCus {
@@ -223,6 +223,7 @@ h2 {
     transition: 0.4s ease;
     background:#252c36;
     font-size: 30px;
+    animation: invisible 1s forwards;
 }
 
 .menu_item:hover {
@@ -238,6 +239,7 @@ h2 {
     text-align: center;
     background-size: cover;
     background: linear-gradient(circle at top center, #307885, #252c36);
+    animation: invisible 1s forwards;
 }
 
 .main-container {
@@ -276,10 +278,9 @@ h2 {
     margin-bottom: 0;
     cursor: pointer;
     transition: 0.4s ease;
-    text-align: center
+    text-align: center;
+    animation: invisible 2s forwards;
 }
-
-
 
 
 .index-content > a:hover {
@@ -305,17 +306,42 @@ h2 {
 .index-content.about-container > p {
     font-size: 38px;
     height: 60vh;
-    padding: 100px 0 50px 0;
+    padding: 110px 0 50px 0;
     margin: 0 100px 0 100px;
     color: #CCC;
 }
 
-/* .circle {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background: radial-gradient(circle at left center, #338caf, #28cabd);
-} */
+.about-container-elem {
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+}
+
+.about-container-cirle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #CEEDDB;
+  display: inline-block;
+  position: relative;
+}
+
+.about-container-square {
+  width: 30px;
+  height: 30px;
+  background-color: #85BAA1;
+  display: inline-block;
+  position: relative;
+}
+
+.about-container-triangle {
+  border: 15px solid transparent;
+  border-bottom: 30px solid #6E8894;
+  display: inline-block;
+  position: relative;
+}
 
 .index-content > h1, .index-content > h2:nth-child(1){
   animation: pulse 3s infinite 0.2s;
@@ -495,10 +521,10 @@ h2 {
     background-position: center center;
 }
 
-.index-content.support {
-
+@keyframes invisible {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
-
 
 form {
     max-width: 500px;
