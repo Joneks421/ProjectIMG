@@ -5,20 +5,344 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minecraft Server</title>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/icon.png">
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
 <body>
     <header>
+      <!-- НАВИГАЦИЯ -->
+        <div class="container-fluide fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light myNav">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
+                    <ul class="mb-2 mb-lg-0 info">
+                        <li><span>Ip:</span> 000.000.000.000</li>
+                        <li><span>Версия:</span> 1.12.2</li>
+                        <li><span>Игроков:</span> 200 из 1500</li>
+                    </ul>
+                    <a class="navbar-brand" href="#">Minecraft Server</a>
+                    <ul class="navbar-nav mb-2 mb-lg-0  ">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">О сервере</a>
+                        
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#mods">Моды</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Рейтинг</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Галерея</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled">Контакты</a>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                </div>
+              </nav>
+        </div>
+
 
     </header>
     <section>
 
+      <!-- О сервере -->
+        <div class="container about">
+            <div class="row">
+                <div class="col-12 text-white animRow">
+                    <h2 class="text-center">Привествуем на</h2>
+                        <h1 class="text-center text-uppercse">Первом сервере Minecraft для технического творчества при поддержке Федерального центра дополнительного образования</h1>
+                        <h3 class="text-center">Особенности сервера</h3>
+
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-12 text-white animRow2"><ol>
+                    <li>Карта игровой зоны соответствует карте территорий Российской
+                        Федерации и включает все регионы Страны. Каждый игровой
+                        регион будет содержать определенный тип ресурсов, а
+                        участникам игрового сервера будет необходимо налаживать
+                        торговые отношения и выстраивать договоренности для
+                        взаимовыгодного сотрудничества</li>
+                    <li>Игровые модификации добавляют в игру новые технологические
+                        элементы и позволяют участникам находить новые типы
+                        ресурсов, необходимые для развития важных отраслей
+                        современной жизни (энергетика, космонавтика, биологические
+                        виды новых сельскохозяйственных культур и многое другое)</li>
+                    <li>Команда организаторов систематически проводит
+                        образовательные и развлекательные события (Ивенты): кейскарты, jumping пазлы, королевские битвы, командные
+                        головоломки и многое другое</li>
+                </ol>
+            <p>В 2023 году сервер откроет свои двери для всех желающих, но уже
+сейчас самые преданные любители кубической песочницы могут
+подать заявку на beta-тестирование. Торопитесь!</p>
+
+            </div>
+        </div>
+
+
     </section>
-    <section></section>
-    <section></section>
+    <section>
+      <!-- Модификации -->
+
+      <div class="container" id="mods">
+        <div class="row title">
+          <div class="col-12 text-center text-white text-uppercse">
+            <h2>Модификации</h2>
+          </div>
+        </div>
+
+        <!-- Карусель -->
+
+        <!-- Carousel wrapper -->
+<div
+id="carouselMultiItemExample"
+class="carousel slide carousel-dark text-center"
+data-mdb-ride="carousel"
+>
+<!-- Controls -->
+<div class="d-flex justify-content-center mb-4">
+  <button
+    class="carousel-control-prev position-relative"
+    type="button"
+    data-mdb-target="#carouselMultiItemExample"
+    data-mdb-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next position-relative"
+    type="button"
+    data-mdb-target="#carouselMultiItemExample"
+    data-mdb-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Inner -->
+<div class="carousel-inner py-4">
+  <!-- Single item -->
+  <div class="carousel-item active">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card bg-light text-dar">
+            <img
+              src="img/space.jpg"
+              class="card-img-top"
+              alt="Waterfall"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Galacticraft</h5>
+              <p class="card-text">
+                Описание<br>
+                Наверное самый популярный мод на ракеты и космос для майнкрафт, с его нововведениями можно будет построить многоуровневую ракету и отправиться в путешествие на другие планеты, изучать их, строить космические станции.
+              </p>
+              <a href="https://minecraft-inside.ru/mods/9856-galacticraft-planets-mod.html" class="btn btn-primary glow-on-hover" target="_blank">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card bg-light text-dar">
+            <img
+              src="img/industrial.jpg"
+              class="card-img-top"
+              alt="Sunset Over the Sea"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Industrial Craft 2</h5>
+              <p class="card-text">
+                Описание<br>
+                Большой и старый технический мод, который дарит игроку множество работающих на электричестве механизмов для самых разных сфер игровой жизни, включая добычу руд, обработку ресурсов и  управление сельским хозяйством.
+              </p>
+              <a href="https://minecraft-inside.ru/mods/9559-industrial-craft-2-mod.html" class="btn btn-primary glow-on-hover" target="_blank">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card bg-light text-dar">
+            <img
+              src="img/farmer.jpg"
+              class="card-img-top"
+              alt="Sunset over the Sea"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Farmer's Delight</h5>
+              <p class="card-text">
+                Описание<br>
+                Farmer's Delight создан для улучшения механик приготовления пищи и расширения фермерства в майнкрафт. Его цель добавит небольшое количество нового контента и расширить взаимодействие игрока с уже существующими предметами и блоками.
+              </p>
+              <a href="https://minecraft-inside.ru/mods/137734-farmers-delight.html" class="btn btn-primary glow-on-hover" target="_blank">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <div class="card">
+            <img
+              src="img/furniture.jpg"
+              class="card-img-top"
+              alt="Fissure in Sandstone"
+            />
+            <div class="card-body">
+              <h5 class="card-title">MrCrayfish’s Furniture</h5>
+              <p class="card-text">
+                Описание<br>
+                Популярный мод на мебель в майнкрафт, который добавит большое количество разнообразной фурнитуры, например, появится: стол, стулья, диван, кресла, телевизор, компьютер и другие предметы. Все предметы доступны для крафта.
+              </p>
+              <a href="https://minecraft-inside.ru/mods/9764-mrcrayfishs-furniture-mod.html" class="btn btn-primary glow-on-hover" target="_blank">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="img/cars.jpg"
+              class="card-img-top"
+              alt="Storm Clouds"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Immersive Vehicles</h5>
+              <p class="card-text">
+                Описание<br>
+                Данная модификация - продолжение мода Flight Simulator, она добавит в майнкрафт реалистичные механики для огромного количества транспортных средств. Все средства передвижения разбиты на паки, необходимые для установки.
+              </p>
+              <a href="https://minecraft-inside.ru/mods/66687-transport-simulator.html" class="btn btn-primary glow-on-hover" target="_blank">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="img/create.jpg"
+              class="card-img-top"
+              alt="Hot Air Balloons"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Create</h5>
+              <p class="card-text">
+                Описание<br>
+                Create предлагает множество инструментов и блоков для создания и декорации построек, а так же автоматизации. Новые элементы дадут игроку на выбор больше вариантов дизайна, обработка предметов будет происходить не в одном блоке.
+              </p>
+              <a href="https://minecraft-inside.ru/mods/102865-create_.html" class="btn btn-primary glow-on-hover" target="_blank">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <div class="card bg-light text-dark">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
+              class="card-img-top"
+              alt="Peaks Against the Starry Sky"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="card bg-light text-dar">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
+              class="card-img-top"
+              alt="Bridge Over Water"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="card bg-light text-dar">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
+              class="card-img-top"
+              alt="Purbeck Heritage Coast"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner -->
+</div>
+<!-- Carousel wrapper -->
+      </div>
+    </section>
+    <section>
+      <!-- Таблица рейтинга игроков -->
+      <div class="container" id="rey_players">
+        
+
+      </div>
+    </section>
     <footer></footer>
+    <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"
+></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

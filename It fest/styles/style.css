@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+
+
+body{
+    background-color: #330000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D18'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FA3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FA3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Bitter', serif;
+}
+/* Ну это короче верхняя панель */
+.info{
+    list-style: none;
+    color: #444141;
+    padding-left: 0;
+}
+.info span{
+    color: blue;
+}
+
+.myNav li{
+    padding: 0;
+    font-size: 15px;
+}
+/*Это Об сервере*/
+
+.about {
+    padding-top: 220px;
+}
+
+.about h1{
+    font-size: 40px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    margin: 50px auto;
+}
+
+.about h2{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.about h3{
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about ol{
+    margin-top: 15px;
+}
+ 
+.about p, li {
+    font-size: 20px;
+    padding-top: 15px;
+    text-align: justify;
+}
+
+.animRow{
+    transform: translateY(-150%);
+    animation: anim 1s forwards;
+}
+
+@keyframes anim{
+    0%{transform: translateX(150%);}
+    100%{transform: translateY(0);}
+}
+
+.animRow2{
+    animation: ani2m 1s forwards;
+    opacity: 0;
+}
+
+@keyframes ani2m{
+      100%{
+        opacity: 1;
+      }
+    }
+
+
+/* Модификации */
+.title h2{
+    margin: 200px auto 50px;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+
+
+
+.glow-on-hover {
+    width: 180px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
