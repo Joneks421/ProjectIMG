@@ -1,6 +1,10 @@
 import json
 import firebase_admin
 import os
+
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 from datetime import datetime, date, time
 
 from firebase_admin import credentials, firestore, storage
@@ -14,6 +18,21 @@ db = firestore.client()
 bucket = storage.bucket()
 
 app = Flask(__name__)
+
+
+def watermark_text(input_image_path,
+                   output_image_path,
+                   text, pos):
+    photo = Image.open(input_image_path)
+
+
+    drawing = ImageDraw.Draw(photo)
+
+    black = (3, 8, 12)
+    font = ImageFont.truetype("Pillow/Tests/fonts/FreeMono.ttf", 40)
+    drawing.text(pos, text, fill=black, font=font)
+    photo.show()
+    photo.save(output_image_path)
 
 
 @app.route("/")
@@ -32,16 +51,20 @@ def pic():
     #     print(request.get_json())
     if request.method == "POST":
         print(1)
+
         title = request.form['title']
 
         f = request.files['image']
         f.save(title)
+
+        ########Watermark#####
+        watermark_text(title, title, "CusTD Watermark", (0, 0))
         ######## Файл#######
         blob = bucket.blob(title)
         blob.upload_from_filename(title)
         blob.make_public()
         plink = blob.public_url
-        os.remove(title)
+
         #######db#############3
         picid = None
         info = {'title': title, 'image': plink}
