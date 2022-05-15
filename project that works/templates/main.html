@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>CusTD</title>
+  <link rel="stylesheet" href="\static\styles\main-style.css">
+  <link rel="stylesheet" href="\static\styles\bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+</head>
+
+<body>
+  <!-- <div class="header" id="header"> -->
+    <div class="container-menu" id="header">
+      <div class="name-menu">
+        <span class="name-menuCus">Cus</span><span class="name-menuT">T</span><span class="name-menuD">D</span>
+      </div>
+      <div class="menu">
+        
+        <a href="#inst" class="menu_item">Инструкция</a>
+        <a href="#about" class="menu_item">О Сайте</a>
+        <a href="#info" class="menu_item">FaQ</a>
+        <a href="#info" class="menu_item">Связь</a>
+      </div>
+     
+
+    </div>
+
+
+    <div class="index-content main">
+      <div class="index-content main-container">
+        <h1>Онлайн<br>фото-рецензор</h1>
+        <div class="index-content main-container-logo"></div>
+        <a href="/index" style="font-size: 30px;">Начать</a>
+      </div>
+    </div>
+
+    <div class="index-content about" id="about">
+      <h2>О сайте</h2>
+      <!-- <div class="circle" style="position: absolute;"></div> -->
+      <div class="index-content about-container">
+        <div class="about-container-elem">
+          <div class="about-container-cirle"></div>
+          <div class="about-container-square"></div>
+          <div class="about-container-triangle"></div>
+        </div>
+        <p>CusTD - это сайт для работы с изображениями. Он позволяет оставлять пометки, комментарии на изображении и
+          отправлять ссылку на него.
+          <br>
+          <br>
+          Набором удобных инструментов вы можете подробно обозначить проблему изображения.
+          <br>
+          <br>
+          Сайт имеет понятный интерфейс в котором легко разобраться любому.
+        </p>
+      </div>
+    </div>
+
+    <div class="index-content inst" id="inst">
+      <h2>Инструкция использования</h2>
+      <div class="index-content inst-container">
+        <div>
+          <p>1. Загрузите изображение на сайт:</p>
+          <img src="../static/images/123.jpg" alt="">
+        </div>
+        <div>
+          <p>2. Используйте инструменты:</p>
+          <img src="../static/images/components.jpg" alt="">
+        </div>
+        <!-- <div class="index-content inst-container-1img"></div>
+            <div class="index-content inst-container-2img"></div> -->
+      </div>
+    </div>
+    <!-- Carousel wrapper -->
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+      <div class="index-content info" id="info">
+        <h2>Основное</h2>
+      </div>
+      <!-- Controls -->
+      <div class="d-flex justify-content-center mb-4">
+        <button class="carousel-control-prev position-relative text-danger btn-prev" type="button"
+          data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <div class="faq-p">
+          <p>FaQ</p>
+        </div>
+
+        <button class="carousel-control-next position-relative text-danger btn-next" type="button"
+          data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Inner -->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"></div>
+      <div class="carousel-inner py-4 index-content faq">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card text-light bg-danger">
+                  <div class="card-body">
+                    <h5 class="card-title">1.Сайт полностью бесплатен?</h5>
+                    <p class="card-text">
+                      Да, сайт никак не монетизирован и абсолютно бесплатен в пользовани
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4  col-md-4 col-sm-4">
+                <div class="card text-light bg-warning">
+                  <div class="card-body">
+                    <h5 class="card-title">2.С какого возвраста можно пользоваться сайтом?</h5>
+                    <p class="card-text">
+                      У нашего сайта нет возврастных ограничений
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4  col-md-4 col-sm-4">
+                <div class="card card text-light bg-success">
+                  <div class="card-body">
+                    <h5 class="card-title">3.Сайт требует регистрации?</h5>
+                    <p class="card-text">
+                    <p></p>
+                    Нет, для работы сайта регистрация не требуется
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card card card text-light bg-danger">
+                  <div class="card-body">
+                    <h5 class="card-title">1.Наша почта:</h5>
+                    <p class="card-text">
+                      --------------------------------------------
+                      https://www.google.com/intl/ru/
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card card card text-light bg-primary">
+                  <div class="card-body">
+                    <h5 class="card-title">2.Наш ВК:</h5>
+                    <p class="card-text">
+                      --------------------------------------------
+                      https://vk.com/
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="card card card text-light bg-info">
+                  <div class="card-body">
+                    <h5 class="card-title">3.Наш Telegram:</h5>
+                    <p class="card-text">
+                      --------------------------------------------
+                      https://web.telegram.org/k/
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inner -->
+      </div>
+    </div>
+    <!-- Carousel wrapper -->
+
+    <div class="returny verni" id="verni">
+      <a href="#header">↑</a>
+    </div>
+
+</body>
+
+<script src="\static\scripts\main.js"></script>
+
+</html>
