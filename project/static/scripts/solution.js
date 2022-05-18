@@ -19,8 +19,6 @@ const burger = $(menu, '.burger');
 const newMode = $(menu, '.mode');
 const comments = $(menu, '.comments');
 const commentsTools = $(menu, '.comments-tools');
-const deletes = $(menu, '.delete')
-const deletesTools = $(menu, '.delete-tools')
 const menuToggle = $(commentsTools, '.menu__toggle', false);
 const draw = $(menu, '.draw');
 const drawTools = $(menu, '.draw-tools');
@@ -176,7 +174,6 @@ currentImage.addEventListener('load', beforeLoadImg);
 if (sessionStorage.getItem('imgId')) {
     imgId = sessionStorage.getItem('imgId');
     currentImage.src = sessionStorage.getItem('imgUrl');
-    currentImage.height= window.screen.height -150;
     menuUrl.value = sessionStorage.getItem('imgSharedLink');
 };
 
@@ -303,15 +300,6 @@ comments.addEventListener('click', () => {
     menu.dataset.state = 'selected';
     comments.dataset.state = 'selected';
     commentsTools.classList.remove('tool');
-    canvas.style.cursor = 'default';
-    canvas.addEventListener('click', addCommentEvent);
-    canvas.removeEventListener('mousemove', circle);
-});
-
-deletes.addEventListener('click', () => {
-    menu.dataset.state = 'selected';
-    deletes.dataset.state = 'selected';
-    deletesTools.classList.remove('tool');
     canvas.style.cursor = 'default';
     canvas.addEventListener('click', addCommentEvent);
     canvas.removeEventListener('mousemove', circle);
@@ -458,7 +446,6 @@ if (window.location.search) {
         comments.dataset.state = 'selected';
         commentsTools.classList.remove('tool');
         currentImage.addEventListener('load', () => {
-            currentImage.height= window.screen.height -150;
             resizeCanvasAndMask();
             checkImg = false;
             menu.dataset.state = 'selected';
@@ -496,6 +483,7 @@ if (window.location.search) {
 function wss() {
     connection = new WebSocket(`wss://neto-api.herokuapp.com/pic/${imgId}`);
     connection.addEventListener('message', event => {
+        console.log(JSON.parse(event.data));
         if (JSON.parse(event.data).event === 'pic') {
             if (JSON.parse(event.data).pic.mask) {
                 canvas.style.background = `url(${JSON.parse(event.data).pic.mask})`;
@@ -612,11 +600,13 @@ function tick() {
         } else {
             modeElements.forEach(el => {
                 if (el.dataset.state === 'selected') {
+                    console.log(el);
                     widthMode = parseInt(getComputedStyle(el).width);
                 };
             });
             toolsElements.forEach(el => {
                 if (!el.classList.contains('tool')) {
+                    console.log(el)
                     widthTool = parseInt(getComputedStyle(el).width);
                 };
             });
